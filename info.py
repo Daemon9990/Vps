@@ -10,9 +10,9 @@ def is_enabled(value, default):
         return default
 # Bot information
 SESSION = environ.get('SESSION', 'JACK_ROBOT')
-API_ID = ''
-API_HASH = ''
-BOT_TOKEN = '' 
+API_ID = '31235022'
+API_HASH = '64a8cdb2c92d7ac433765af3e65dabb1'
+BOT_TOKEN = '8958651105:AAE7M0o9735870a58-agEJhfKf408G1ZDZ8' 
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -20,8 +20,8 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', '')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "").split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7593363046').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "-1003579217190").split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -33,7 +33,7 @@ AUTH_CHANNEL_2 = int(auth_channel_2) if auth_channel_2 and id_pattern.search(aut
 MULTI_FORCESUB = is_enabled((environ.get('MULTI_FORCESUB', "False")), False)
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Vasu:@Daemon990@cluster0.rv1vrmg.mongodb.net/?appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', 'jack')
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'bulwark')
 # Secondary MongoDB (optional — leave empty to disable dual-DB)
@@ -41,7 +41,7 @@ DATABASE_URI_2 = environ.get('DATABASE_URI_2', '')
 DATABASE_NAME_2 = environ.get('DATABASE_NAME_2', 'jack2')
 COLLECTION_NAME_2 = environ.get('COLLECTION_NAME_2', COLLECTION_NAME)
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003931443335'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
 
 movie_updates_channel = environ.get('MOVIE_UPDATES_CHANNEL', '').strip()
