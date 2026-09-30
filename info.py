@@ -33,7 +33,7 @@ AUTH_CHANNEL_2 = int(auth_channel_2) if auth_channel_2 and id_pattern.search(aut
 MULTI_FORCESUB = is_enabled((environ.get('MULTI_FORCESUB', "False")), False)
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Vasu:@Daemon990@cluster0.rv1vrmg.mongodb.net/?appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jackes:jones@cluster0.ucw4gkw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', 'jack')
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'bulwark')
 # Secondary MongoDB (optional — leave empty to disable dual-DB)
