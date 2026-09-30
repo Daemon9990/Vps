@@ -21,11 +21,11 @@ PICS = (environ.get('PICS', '')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7593363046').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "-1003579217190").split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "-1004367802950").split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL','')
+auth_channel = environ.get('AUTH_CHANNEL','-1004367802950')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 auth_channel_2 = environ.get('AUTH_CHANNEL_2', '')
